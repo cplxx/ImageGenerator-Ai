@@ -12,12 +12,12 @@ type Props = {
 
 const Header = ({ activeItem }: Props) => {
   return (
-    <div className="w-full p-5 border-b min-h-[60px] boder-b-[#ffffff32]  ">
+    <div className="w-full p-5 border-b min-h-[60px] boder-b-[#ffffff32]  bg-black  ">
       <div className="hidden md:w-[90%] mx-auto md:flex items-center justify-between">
         <div>
           <Link href={"/"}>
             <h1 className="text-3xl font-Inter cursor-pointer">
-              <span className="text-[#64ff4c]">Imagi</span>AI
+              <span className="text-[#64ff4c]">Image</span>AI
             </h1>
           </Link>
         </div>

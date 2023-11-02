@@ -9,7 +9,7 @@ const Hero = (props: Props) => {
   return (
     <div className="w-full md:min-h-screen flex items-center justify-center">
       <div>
-        <h1 className="text-4xl py-5 xl:text-7xl 2xl:text-8xl text-center xl:leading-[80px] 2xl:leading-[100px] sm:mt-20">
+        <h1 className="text-4xl py-5 xl:text-7xl 2xl:text-8xl text-center xl:leading-[80px] 2xl:leading-[100px] sm:mt-20 mt-20">
           Make <span className="text-[#64ff4b]">Ai image</span> <br />
           With your <br /> Imagination
         </h1>
