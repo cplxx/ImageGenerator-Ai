@@ -3,14 +3,26 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Navigation from "./Navigation";
-import { MenuIcon, SearchIcon, User } from "lucide-react";
+import { MenuIcon, SearchIcon } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "./sheet";
+import { CgProfile } from "react-icons/cg";
+import DropDown from "./dropdown";
+import { User } from "@clerk/nextjs/server";
+import { UserButton } from "@clerk/nextjs";
 
 type Props = {
   activeItem: number;
+  user: User | null;
 };
 
-const Header = ({ activeItem }: Props) => {
+const Header = ({ user, activeItem }: Props) => {
+  const [open, setOpen] = useState(false);
+  const [activeProfile, setActiveProfile] = useState(false);
+  const [isSellerExist, setIsSellerExist] = useState(false);
+
+  const handleProfile = () => {
+    setActiveProfile(!activeProfile);
+  };
   return (
     <div className="w-full p-5 border-b min-h-[60px] boder-b-[#ffffff32]  bg-black  ">
       <div className="hidden md:w-[90%] mx-auto md:flex items-center justify-between">
@@ -26,9 +38,7 @@ const Header = ({ activeItem }: Props) => {
         </div>
         <div className="flex items-center ml-10">
           <SearchIcon className="text-[25px] mr-5 cursor-pointer" />
-          <Link href={"/sign-in"}>
-            <User className="text-[25px] mr-5 cursor-pointer" />
-          </Link>
+          <UserButton afterSignOutUrl="/" />
         </div>
       </div>
       <div className="w-full md:hidden flex items-center justify-between">
