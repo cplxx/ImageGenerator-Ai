@@ -1,20 +1,20 @@
-"use client";
+'use client';
 
-import About from "@/components/ui/about";
-import BestSellers from "@/components/ui/best-sellerts";
-import Footer from "@/components/ui/footer";
-import Future from "@/components/ui/future";
-import Hero from "@/components/ui/hero";
-import Partners from "@/components/ui/partners";
-import PromptCard from "@/components/ui/prompt-card";
-import SellersBanner from "@/components/ui/sellers-banner";
-import { styles } from "@/lib/styles";
-import { Divider, User } from "@nextui-org/react";
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import Loader from "@/lib/Loader";
-import Header from "@/components/ui/Header";
+import About from '@/components/ui/about';
+import BestSellers from '@/components/ui/best-sellerts';
+import Footer from '@/components/ui/footer';
+import Future from '@/components/ui/future';
+import Hero from '@/components/ui/hero';
+import Partners from '@/components/ui/partners';
+import PromptCard from '@/components/ui/prompt-card';
+import SellersBanner from '@/components/ui/sellers-banner';
+import { styles } from '@/lib/styles';
+import { Divider, User } from '@nextui-org/react';
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import Loader from '@/lib/Loader';
+import Header from '@/components/ui/Header';
 
 type Props = {};
 
@@ -31,7 +31,7 @@ const Page = (props: Props) => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("/api/me")
+      .get('/api/me')
       .then((response) => {
         setUser(response.data.user);
         setLoading(false);
@@ -59,7 +59,7 @@ const Page = (props: Props) => {
             <Hero />
           </div>
           <Image
-            src={"https://pixner.net/aikeu/assets/images/footer/shape-two.png"}
+            src={'https://pixner.net/aikeu/assets/images/footer/shape-two.png'}
             width={120}
             height={120}
             alt=""

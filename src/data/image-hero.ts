@@ -18,6 +18,9 @@ export const rowOneImage: ImageProps[] = [
   {
     url: "https://pixner.net/aikeu/assets/images/banner/large-slider/five.png",
   },
+  {
+    url: "https://pixner.net/aikeu/assets/images/banner/large-slider/five.png",
+  },
 ];
 
 export const rowTwoImage: ImageProps[] = [
