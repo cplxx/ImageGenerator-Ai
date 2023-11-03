@@ -55,7 +55,7 @@ const Page = (props: Props) => {
       ) : (
         <div>
           <div>
-            <Header activeItem={0} user={user} />
+            <Header activeItem={0} />
             <Hero />
           </div>
           <Image
